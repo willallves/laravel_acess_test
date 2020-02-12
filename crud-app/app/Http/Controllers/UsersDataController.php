@@ -47,7 +47,7 @@ class UsersDataController extends Controller
             'address'=>'required',
             'city'=>'required',
             'state'=>'required',
-            'zip_code'=>'required'
+            'Zip_code'=>'required'
         ]);
 
         $usersdata = new UsersData([
@@ -59,7 +59,7 @@ class UsersDataController extends Controller
             'address' => $request->get('address'),
             'city' => $request->get('city'),
             'state' => $request->get('state'),
-            'zip_code' => $request->get('zip_code'),
+            'Zip_code' => $request->get('Zip_code'),
         ]);
         $usersdata->save();
         return redirect('/usersdatas')->with('success', 'User saved!');
@@ -106,7 +106,7 @@ class UsersDataController extends Controller
             'address'=>'required',
             'city'=>'required',
             'state'=>'required',
-            'zip_code'=>'required'
+            'Zip_code'=>'required',
         ]);
 
         $usersdata = UsersData::find($id);
@@ -118,7 +118,7 @@ class UsersDataController extends Controller
         $usersdata->address =  $request->get('address');
         $usersdata->city =  $request->get('city');
         $usersdata->state =  $request->get('state');
-        $usersdata->zip_code =  $request->get('zip_code');
+        $usersdata->Zip_code =  $request->get('Zip_code');
 
         $usersdata->save();
         return redirect('/usersdatas')->with('success', 'User updated!');
@@ -132,6 +132,9 @@ class UsersDataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $usersdata = UsersData::find($id);
+        $usersdata->delete();
+
+        return redirect('/usersdatas')->with('success', 'UserData deleted!');
     }
 }

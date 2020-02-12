@@ -61,8 +61,8 @@
             </div>
 
             <div class="form-group">
-                <label for="zip_code">CEP::</label>
-                <input type="text" class="form-control" name="zip_code" value={{ $usersdata->zip_code }} />
+                <label for="Zip_code">CEP:</label>
+                <input type="text" class="form-control" name="Zip_code" value={{ $usersdata->Zip_code }} />
             </div>
 
 

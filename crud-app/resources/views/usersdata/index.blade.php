@@ -1,12 +1,22 @@
 @extends('base')
 
+@if(session()->get('success'))
+    <div class="alert alert-success">
+      {{ session()->get('success') }}  
+    </div>
+  @endif
+</div>
+
 @section('main')
+
 <div class="row">
 <div class="col-sm-12">
     <h1 class="display-3">UsersData</h1>   
     <div>
       <a style="margin: 19px;" href="{{ route('usersdatas.create')}}" class="btn btn-primary">New contact</a>
-    </div>  
+    </div> 
+
+    <div class="col-sm-12">
  
   <table class="table table-striped">
     <thead>
@@ -30,13 +40,13 @@
             <td>{{$usersdata->id}}</td>
             <td>{{$usersdata->name}}</td>
             <td>{{$usersdata->cpf}}</td>
-            <td>{{$usersdata->date_of_birt}}</td>
+            <td>{{$usersdata->date_of_birth}}</td>
             <td>{{$usersdata->email}}</td>
             <td>{{$usersdata->phone}}</td>
             <td>{{$usersdata->address}}</td>
             <td>{{$usersdata->city}}</td>
             <td>{{$usersdata->state}}</td>
-            <td>{{$usersdata->zip_code}}</td>
+            <td>{{$usersdata->Zip_code}}</td>
             <td>
                 <a href="{{ route('usersdatas.edit',$usersdata->id)}}" class="btn btn-primary">Edit</a>
             </td>
