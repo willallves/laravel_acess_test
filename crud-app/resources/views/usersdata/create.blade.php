@@ -51,8 +51,8 @@
               <input type="text" class="form-control" name="state"/>
           </div>          
           <div class="form-group">
-              <label for="zip_code">CEP:</label>
-              <input type="text" class="form-control" name="zip_code"/>
+              <label for="Zip_code">CEP:</label>
+              <input type="text" class="form-control" name="Zip_code"/>
           </div>                
           <button type="submit" class="btn btn-primary-outline">Add usersdata</button>
       </form>

@@ -15,7 +15,7 @@ class UsersData extends Model
         'address',
         'city',
         'state',
-        'zip_code'
+        'Zip_code'
 
     ];
 }

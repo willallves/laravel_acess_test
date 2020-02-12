@@ -59,7 +59,7 @@ class UsersDataController extends Controller
             'address' => $request->get('address'),
             'city' => $request->get('city'),
             'state' => $request->get('state'),
-            'Zip_code' => $request->get('Zip_code'),
+            'Zip_code' => $request->get('Zip_code')
         ]);
         $usersdata->save();
         return redirect('/usersdatas')->with('success', 'User saved!');
@@ -106,7 +106,7 @@ class UsersDataController extends Controller
             'address'=>'required',
             'city'=>'required',
             'state'=>'required',
-            'Zip_code'=>'required',
+            'Zip_code'=>'required'
         ]);
 
         $usersdata = UsersData::find($id);
