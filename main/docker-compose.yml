@@ -1,0 +1,24 @@
+#####
+# Docker compose YAML file
+#
+# For documentation see: https://docs.docker.com/compose/yml/
+#####
+
+# Use root/example as user/password credentials
+version: '3.3'
+
+services:
+  
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: acess
+
+    # Where our data will be persisted
+    volumes:
+      - "./mydb:/var/lib/mysql"
+   #   - ./mysql-db-create.sh:/docker-entrypoint-initdb.d/mysql-db-create.sh
